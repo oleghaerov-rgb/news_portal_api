@@ -126,9 +126,11 @@ For production:
 ```text
 SECRET_KEY=<secure secret key>
 DEBUG=False
-ALLOWED_HOSTS=news-portal-example.onrender.com
+ALLOWED_HOSTS=news-portal-api-y7hi.onrender.com
 DATABASE_URL=<optional PostgreSQL URL>
 ```
+
+On Render, the application also reads `RENDER_EXTERNAL_HOSTNAME`, which Render sets automatically for web services. If `DisallowedHost` still appears, set `ALLOWED_HOSTS` manually to your service host without `https://`.
 
 ## Render Deployment
 
